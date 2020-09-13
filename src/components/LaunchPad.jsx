@@ -46,7 +46,6 @@ class LaunchPad extends Component {
   };
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.launchPad.length === 5) {
-      console.log(nextProps.launchPad);
       let maxIndex = 0;
       nextProps.launchPad.forEach((e, index) => {
         if (nextProps.launchPad[maxIndex].temp < e.temp) {
@@ -62,7 +61,6 @@ class LaunchPad extends Component {
     return null;
   }
   render() {
-    console.log(this.state.winner);
     let imgStyle = {
       width: "18%",
       border: "3px solid red",
